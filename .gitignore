@@ -1,0 +1,10 @@
+screenshots/
+pdf/
+*.png
+*.pdf
+*.log
+*.stackdump
+core
+*.core
+*.dmp
+.env

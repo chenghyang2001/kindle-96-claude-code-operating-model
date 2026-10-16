@@ -1,0 +1,78 @@
+{
+  "book": "K96",
+  "repo": "kindle-96-claude-code-operating-model",
+  "title": "The Claude Code Operating Model",
+  "prompt_source": "teaching/LESSON-PLAN.md",
+  "chapters": [
+    {
+      "id": "01",
+      "folder": "k96-ch01-practice",
+      "mode": "normal",
+      "minutes": 12,
+      "note": "建立共用小專案 taskbox（Python＋pytest），並用 stream-json 觀察一次 agentic loop。"
+    },
+    {
+      "id": "02",
+      "folder": "k96-ch02-practice",
+      "mode": "normal",
+      "minutes": 10,
+      "note": "複製 taskbox，練 CLAUDE.md 三問、CLAUDE.local.md、條件規則 .claude/rules。"
+    },
+    {
+      "id": "03",
+      "folder": "k96-ch03-practice",
+      "mode": "normal",
+      "minutes": 15,
+      "note": "專案層級三個 skill（任務型、參考型、組合型漸進揭露），用 claude -p 驗證觸發。"
+    },
+    {
+      "id": "04",
+      "folder": "k96-ch04-practice",
+      "mode": "normal",
+      "minutes": 15,
+      "note": "專案層級三個 sub-agent，示範平行與管線兩種模式。"
+    },
+    {
+      "id": "05",
+      "folder": "k96-ch05-practice",
+      "mode": "isolated",
+      "minutes": 15,
+      "note": "hooks 只寫在專案 .claude/settings.json；練習視窗排除全域 hook。驗證危險指令與 .env 被擋。"
+    },
+    {
+      "id": "06",
+      "folder": "k96-ch06-practice",
+      "mode": "normal",
+      "minutes": 15,
+      "note": "自寫 SQLite MCP server（FastMCP），以 --scope project 註冊到 .mcp.json，不寫使用者層級。"
+    },
+    {
+      "id": "07",
+      "folder": "k96-ch07-practice",
+      "mode": "normal",
+      "minutes": 15,
+      "note": "headless 只在本機示範；GitHub Actions 只寫 yml 不啟用，不建 repo、不 push。"
+    },
+    {
+      "id": "08",
+      "folder": "k96-ch08-practice",
+      "mode": "normal",
+      "minutes": 15,
+      "note": "Python claude-agent-sdk 走已登入的 Claude Code 訂閱，不設 ANTHROPIC_API_KEY；認證失敗則只保留程式碼與筆記。"
+    },
+    {
+      "id": "09",
+      "folder": "k96-ch09-practice",
+      "mode": "normal",
+      "minutes": 12,
+      "note": "plugin 不安裝到使用者層級，用 --plugin-dir 單次載入測試；私有 marketplace 只建本機檔案。"
+    },
+    {
+      "id": "10",
+      "folder": "k96-ch10-practice",
+      "mode": "normal",
+      "minutes": 12,
+      "note": "團隊共享設定、權限 deny、成本比較、--debug；產出 TEAM-PLAYBOOK.md。"
+    }
+  ]
+}
