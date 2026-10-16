@@ -17,3 +17,6 @@
 | 07 | 2026-10-17 | 約 11 分（預估 15） | text/json/stream-json、護欄、--json-schema、管線、--resume 全在本機示範；ci/review.sh 實跑 exit 2（抓到故意改壞的第 68 行為 critical、pytest 2 failed）；只給 diff 時模型誤判「沒測試會抓到」，故 review.sh 改為把 pytest 結果一併交給 Claude；yml 只寫不啟用（if: false）；全域 Stop hook 對故意保留的未 commit 改動發提醒 |
 | 08 | 2026-10-17 | 約 7 分（預估 15） | 未設 ANTHROPIC_API_KEY，SDK 直接走已登入訂閱成功；sample-output.json 符合 schema；Bash 刻意放進 allowed_tools 以證明是 PreToolUse hook（deny）擋下，共擋 2 次、模型改用 Glob；模型起初自行排除 .md 致最長檔案判錯，提示詞講清楚範圍後正確 |
 | 09 | 2026-10-17 | 約 8 分（預估 12） | 未安裝到使用者層級（known_marketplaces／installed_plugins 皆無 team-kit），改用 --plugin-dir 單次載入，/team-kit:review 與金鑰 hook 皆生效；validate --strict 通過；marketplace 不接受 ../team-kit，改用 Windows junction（換機需重建、實際安裝未驗證）；用 plugin 審查自己抓出 3 個 hook 漏洞與 python3||python 放行陷阱並修正 |
+| 10 | 2026-10-17 | 約 14 分（預估 12） | 專案 settings.json（allow 9／deny 11）＋settings.local.json gitignore＋階層式 CLAUDE.md；實測 Read(./.env) deny 擋不住 python -c open(.env)，補 block_secrets hook 才擋住；haiku 只載入專案設定時成本 $0.0182→$0.0034（全域 149 工具＋159 skill 約 8.3 萬 token 背景）；-p 模式 --debug 不印畫面需改 --debug-file；settings 寫 defaultMode default 但實際為 auto（未查證原因） |
+
+**全部 10 章完成：2026-10-17 05:01–06:21，約 80 分鐘（課表預估 136 分鐘）。** 全域 `~/.claude/settings.json` 每章比對；第 05 章曾被他程序轉成 LF（內容相同）已還原，其餘一致。
